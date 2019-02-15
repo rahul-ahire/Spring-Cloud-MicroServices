@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: data-layer
+
+server:
+  port: 8081
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+      prefer-ip-address: true
+      ip-address: 10.51.56.95

@@ -1,0 +1,25 @@
+info:
+  component: Eurek Server
+
+spring:
+  application:
+    name: eureka-service
+  
+server:
+    port: 8761
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    server:
+      waitTimeInMsWhenSyncEmpty: 0
+  instance:
+      prefer-ip-address: true
+      ip-address: 127.0.0.1
+      instance-id: ${spring.application.name}:${server.port}
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: INFO

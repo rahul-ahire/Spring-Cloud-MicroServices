@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: data-layer
+
+server:
+  port: 8081
+#  port: 8085
+#  port: 8086
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+      prefer-ip-address: true
+      ip-address: 127.0.0.1
+      instance-id: ${spring.application.name}:${random.value}

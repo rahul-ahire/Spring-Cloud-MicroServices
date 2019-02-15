@@ -1,0 +1,6 @@
+com\upath\data\entity\UserInfo.class
+com\upath\data\controller\DataController.class
+com\upath\data\dao\UserDataDao.class
+com\upath\data\DataLayerApplication.class
+com\upath\data\service\DataService.class
+com\upath\data\service\DataServiceImpl.class

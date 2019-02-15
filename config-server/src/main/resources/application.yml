@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    include: native,default
+  cloud:
+    config:
+      discovery:
+        enabled: false
+      server:
+        native:
+          searchLocations: C:/config
+        encrypt:
+          enabled: false

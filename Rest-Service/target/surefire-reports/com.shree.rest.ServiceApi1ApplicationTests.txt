@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.shree.rest.ServiceApi1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.836 sec - in com.shree.rest.ServiceApi1ApplicationTests

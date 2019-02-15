@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: api-gateway
+  
+server:
+    port: 8088
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+  instance:
+      prefer-ip-address: true
+      ip-address: 127.0.0.1
+      instance-id: ${spring.application.name}:${server.port} 
+      
+
+data-layer:
+  ribbon:
+    eureka:
+      enabled: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 600000
+
+#zuul:
+#  routes:
+#    db-service:
+#      path: /data/**
+#      serviceId: data-layer
+#      stripPrefix: false
+#    
+#    rest-service:
+#      path: /rest/**
+#      serviceId: rest-service
+#      stripPrefix: false
